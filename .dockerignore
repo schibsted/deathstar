@@ -1,0 +1,7 @@
+.env
+.git
+.gitignore
+build
+node_modules
+coverage
+deathstar.jpg
