@@ -30,7 +30,7 @@ jest.mock('../../src/utils', () => ({
   },
 }));
 
-describe('pingpong', async () => {
+describe('pingpong', () => {
   const simulation: Simulation = {
     type: 'error',
     properties: {

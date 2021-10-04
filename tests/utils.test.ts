@@ -24,7 +24,7 @@ jest.mock('../src/config', () => ({
 }));
 
 it('should sleep for x milliseconds', () => {
-  jest.useFakeTimers();
+  jest.useFakeTimers('legacy');
   sleep(1000);
   expect(setTimeout).toHaveBeenCalledTimes(1);
   expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1000);
