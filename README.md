@@ -1,4 +1,5 @@
-![Death Star](deathstar.jpg)
+# :boom: Death Star – Application-level chaos engineering
+###### _Because a little chaos is good for you._
 
 Clouds are **chaotic**.<br />
 **Unexpected events** happen all the time.<br />
