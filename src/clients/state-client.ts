@@ -8,8 +8,7 @@ const s3 = new S3({
   secretAccessKey: process.env.AWS_SECRET_KEY,
 });
 
-export const enable = (key: string, simulation: any) => {
-  return s3
+export const enable = (key: string, simulation: any) => s3
     .putObject({
       Bucket: bucket,
       Key: key,
@@ -19,14 +18,11 @@ export const enable = (key: string, simulation: any) => {
       }),
     })
     .promise();
-};
 
-export const disable = (key: string) => {
-  return s3
+export const disable = (key: string) => s3
     .putObject({
       Bucket: bucket,
       Key: key,
       Body: JSON.stringify({}),
     })
     .promise();
-};

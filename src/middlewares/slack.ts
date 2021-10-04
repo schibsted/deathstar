@@ -115,9 +115,9 @@ export const abort = async (slackContext: SlackContext) => {
 
 const verifySignature = async (ctx: Context) => {
   const valid = await slackSigChecker.checkSignature(
-    ctx.request.header['x-slack-signature'],
+    ctx.request.header['x-slack-signature'] as string,
     ctx.request.rawBody,
-    ctx.request.header['x-slack-request-timestamp'],
+    ctx.request.header['x-slack-request-timestamp'] as string,
   );
   if (!valid) {
     ctx.throw(400, 'Invalid Slack signature');

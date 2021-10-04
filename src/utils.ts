@@ -6,25 +6,15 @@ export const sleep = async (ms: number) => {
   await new Promise(resolve => setTimeout(resolve, ms));
 };
 
-export const randomIndex = (arr: any[]) => {
-  return Math.floor(Math.random() * arr.length);
-};
+export const randomIndex = (arr: any[]) => Math.floor(Math.random() * arr.length);
 
-export const randomElement = (arr: any[]) => {
-  return arr[randomIndex(arr)];
-};
+export const randomElement = (arr: any[]) => arr[randomIndex(arr)];
 
-export const lastElement = (arr: any[]) => {
-  return arr[arr.length - 1];
-};
+export const lastElement = (arr: any[]) => arr[arr.length - 1];
 
-export const callbackIdtoAppKey = (callbackId: string) => {
-  return callbackId.split('/').splice(0, 2).join('/');
-};
+export const callbackIdtoAppKey = (callbackId: string) => callbackId.split('/').splice(0, 2).join('/');
 
-export const callbackIdtoSimulationId = (callbackId: string) => {
-  return parseInt(callbackId.split('/').splice(2, 3).toString(), 10);
-};
+export const callbackIdtoSimulationId = (callbackId: string) => parseInt(callbackId.split('/').splice(2, 3).toString(), 10);
 
 export const statusEmoji = (result: boolean) => (result ? ':green:' : ':red_:');
 

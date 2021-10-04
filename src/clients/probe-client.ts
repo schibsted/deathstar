@@ -47,7 +47,7 @@ export const probe = async (probeUrl: ProbeUrl): Promise<ProbeResult> => {
       totalTime: response.timings?.phases.total,
       probeUrl,
     };
-  } catch (error) {
+  } catch (error: any) {
     return {
       result: evaluate(
         probeUrl,

@@ -1,14 +1,16 @@
-export interface App {
-  name: string;
-  slackChannel: string;
-  simulations: Simulation[];
+export interface Header {
+  key: string;
+  value: string;
 }
 
-export interface Simulation {
-  type: 'error' | 'slow';
-  properties: ErrorSimulationProperties | SlowSimulationProperties;
-  target: ProbeUrl[];
-  verify: ProbeUrl[];
+export interface TrafficPattern {
+  paths?: string[];
+  headers?: Header[];
+}
+
+export interface SimulationProperties {
+  whitelisted?: TrafficPattern;
+  blacklisted?: TrafficPattern;
 }
 
 export interface ErrorSimulationProperties extends SimulationProperties {
@@ -19,21 +21,6 @@ export interface SlowSimulationProperties extends SimulationProperties {
   timeout: number;
 }
 
-export interface SimulationProperties {
-  whitelisted?: TrafficPattern;
-  blacklisted?: TrafficPattern;
-}
-
-export interface TrafficPattern {
-  paths?: string[];
-  headers?: Header[];
-}
-
-export interface Header {
-  key: string;
-  value: string;
-}
-
 export interface ProbeUrl {
   url: string;
   method?: 'POST' | 'GET';
@@ -41,6 +28,19 @@ export interface ProbeUrl {
   headers?: Record<string, string>;
   expectedStatus?: number;
   expectedSlow?: number;
+}
+
+export interface Simulation {
+  type: 'error' | 'slow';
+  properties: ErrorSimulationProperties | SlowSimulationProperties;
+  target: ProbeUrl[];
+  verify: ProbeUrl[];
+}
+
+export interface App {
+  name: string;
+  slackChannel: string;
+  simulations: Simulation[];
 }
 
 export interface ProbeResult {
