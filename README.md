@@ -3,14 +3,19 @@
 
 Clouds are **chaotic**.<br />
 **Unexpected events** happen all the time.<br />
-Death Star helps us in **being proactive** and making sure we can **withstand disturbances in the cloud**.
+Death Star is here to help us **being proactive** and ensuring we can **withstand disturbances in the cloud**.
 
-Death Star is a way of creating controlled outage simulations and other types of simulated chaos in our environments, through the means of a Slack bot.
+### Wait what, what's Death Star?
 
-Its purpose is to, by creating our own short and controlled misbehaviours,...
+It's application-level chaos engineering.<br />
+A way of creating controlled outage simulations and other types of simulated chaos, through the means of a Slack bot.
+
+The underlying idea is that, by creating our own short and controlled misbehaviours, we can...
 
 - 🅰️ identify areas for improvement and...
-- 🅱️ ensure we have enough error handling and other resilience capabilities in place so that our end users aren't significantly affected when we are in fact suffering behind the scenes.
+- 🅱️ ensure there's enough error handling and other resilience capabilities in place to avoid too much suffering, even though things are on fire behind the scenes.
+
+A more in-depth reasoning and background can be found in this article: [INSERT LINK HERE](https://lolololol.rofl).
 
 ### How does it work?
 
@@ -27,25 +32,29 @@ The middleware act on signals from the Death Star control plane. Signals that ar
 
 Death Star currently supports the following simulations:
 
-- **`error`** - make the target under attack throw errors
+- **`error`** - make the target under attack throw HTTP errors
 - **`slow`** - make the target extremely slooow
 
 All simulations can be applied to either all endpoints of a service or a selected few endpoints.
 
 It's also possible to define a list of endpoints and HTTP headers that should be excluded from a simulation, because it might be that the same service is used to serve both external and internal users and we may or may not have the same resilience level in both use cases.
 
-### How is this different from other chaos engineering tools?
+### Getting started
 
-For example, it differs from the most iconic chaos engineering tool Chaos Monkey, in various ways.
+* `git clone`, `npm install` and `npm run build`
+* Make necessary changes to `src/config`
+* `npm run start:web` to launch the control plane
+* `npm run start:trigger my-org/my-app` as a cronjob, to trigger a run of a partiular simulation suite at a given time
 
-Death Star operates on the application level. It does not fiddle anything with the underlying infrastructure.
+### Required environment variables
 
-This means that Death Star works in exactly the same way, no matter if it's running on EC2, Heroku, Kubernetes, ECS or as a standalone service on someone's laptop.
+* `AWS_ACCESS_KEY` - A AWS access key with write and read access to `BUCKET_NAME`.
+* `AWS_SECRET_KEY` - A AWS secret key with write and read access to `BUCKET_NAME`.
+* `AWS_REGION` - The AWS region where `BUCKET_NAME` is hosted. Defaults to `eu-north-1`.
+* `BUCKET_NAME` - The name of a S3 bucket. You know, for state.
+* `SLACK_SIGNING_SECRET` - A Slack signing secret, used to verify that requests from Slack are actually coming from Slack.
+* `SLACK_TOKEN` - A Slack access token, for communicating with the Slack APIs.
 
-It also means that it has the potential of carrying through more intelligent and tailored attacks, attacks that for example only target a predefined request pattern.
+### Simulation configuration
 
-Part of the reasoning behind not touching the actual infrastructure comes from the fact that we (CNP) operate on a fairly high abstraction level. AWS manage most of our infrastructure and we should be able to trust them to for example launch new EC2 hosts if a few of ours die. Our time and energy is arguably better spent on making sure our applications are built to handle failure.
-
-### What's the deal with the Star Wars theme?
-
-Ehm... next question!
+See [`src/config/index.ts`](src/config/index.ts) for a typical example configuration.
