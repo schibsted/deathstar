@@ -58,3 +58,8 @@ It's also possible to define a list of endpoints and HTTP headers that should be
 ### Simulation configuration
 
 See [`src/config/index.ts`](src/config/index.ts) for a typical example configuration.
+
+### Emojis, emojis, emojis
+
+The Slack bot uses a lot of custom emojis.
+Scanning the code base for emojis and installing them in your Slack workspace is left as an exercise to the reader.
