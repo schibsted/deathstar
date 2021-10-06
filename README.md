@@ -48,8 +48,8 @@ It's also possible to define a list of endpoints and HTTP headers that should be
 
 ### Required environment variables
 
-* `AWS_ACCESS_KEY` - A AWS access key with read and write permissions to `BUCKET_NAME`.
-* `AWS_SECRET_KEY` - A AWS secret key with read and write permissions to `BUCKET_NAME`.
+* `AWS_ACCESS_KEY` - An AWS access key with read and write permissions to `BUCKET_NAME`.
+* `AWS_SECRET_KEY` - An AWS secret key with read and write permissions to `BUCKET_NAME`.
 * `AWS_REGION` - The AWS region where `BUCKET_NAME` is hosted. Defaults to `eu-north-1`.
 * `BUCKET_NAME` - The name of an S3 bucket. You know, for state.
 * `SLACK_SIGNING_SECRET` - A Slack signing secret, used to verify that requests from Slack are actually coming from Slack.
