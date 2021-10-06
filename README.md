@@ -1,9 +1,9 @@
-# :boom: Death Star – Application-level chaos engineering
+# :boom: Deathstar – Application-level chaos engineering
 ###### _Because a little chaos is good for you._
 
 Clouds are **chaotic**.<br />
 **Unexpected events** happen all the time.<br />
-Death Star is here to help us **being proactive** and ensuring we can **withstand disturbances in the cloud**.
+Deathstar is here to help us **being proactive** and ensuring we can **withstand disturbances in the cloud**.
 
 ### Wait what, what's Death Star?
 
@@ -19,10 +19,10 @@ A more in-depth reasoning and background can be found in this article: [INSERT L
 
 ### How does it work?
 
-Death Star comes in two parts,...
+Deathstar comes in two parts,...
 
-- a Slack bot (this repo), which can be seen as the Death Star control plane. It is responsible for coordinating and carrying out simulations and...
-- a middleware that need to be included in all services that are to be attacked by Death Star
+- a Slack bot (this repo), which can be seen as the Deathstar control plane. It is responsible for coordinating and carrying out simulations and...
+- a middleware that need to be included in all services that are to be attacked by Deathstar
 
 The middleware act on signals from the Death Star control plane. Signals that are broadcasted during an outage simulation.
 
@@ -30,7 +30,7 @@ The middleware act on signals from the Death Star control plane. Signals that ar
 
 ### Mkay, what is it capable of?
 
-Death Star currently supports the following simulations:
+Deathstar currently supports the following simulations:
 
 - **`error`** - make the target under attack throw HTTP errors
 - **`slow`** - make the target extremely slooow
@@ -62,4 +62,4 @@ See [`src/config/index.ts`](src/config/index.ts) for a typical example configura
 ### Emojis, emojis, emojis
 
 The Slack bot uses a lot of custom emojis.
-Scanning the code base for emojis and installing them in your Slack workspace is left as an exercise to the reader.
+Scanning the code base for emojis and installing them in your Slack workspace is left as an exercise to the reader. Sorry.

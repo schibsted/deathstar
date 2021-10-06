@@ -1,7 +1,7 @@
 {
   "name": "deathstar",
   "version": "0.0.1",
-  "description": "Death Star",
+  "description": "Deathstar",
   "main": "index.js",
   "repository": {
     "type": "git",
