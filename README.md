@@ -22,7 +22,7 @@ More in-depth reasoning and background can be found in this article: [INSERT LIN
 Deathstar comes in two parts,...
 
 - a Slack bot (this repo), which can be seen as the Deathstar control plane. It is responsible for coordinating and carrying out simulations and...
-- a middleware that needs to be included in all services that are to be attacked by Deathstar
+- [a middleware](https://github.com/schibsted/deathstar-middleware) that needs to be included in all services that are to be attacked by Deathstar
 
 The middleware act on signals from the Deathstar control plane. Signals that are broadcasted during an outage simulation.
 
@@ -63,3 +63,7 @@ See [`src/config/index.ts`](src/config/index.ts) for a typical example configura
 
 The Slack bot uses a lot of custom emojis.
 Scanning the code base for emojis and installing them in your Slack workspace is left as an exercise to the reader. Sorry.
+
+## From Schibsted with ❤️
+
+[Schibsted](https://schibsted.com/) made this. Come work with us!
