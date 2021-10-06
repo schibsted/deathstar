@@ -15,7 +15,7 @@ The underlying idea is that, by creating our own short and controlled misbehavio
 - 🅰️ identify areas for improvement and...
 - 🅱️ ensure there's enough error handling and other resilience capabilities in place to avoid too much suffering, even though things are on fire behind the scenes.
 
-More in-depth reasoning and background can be found in this article: [INSERT LINK HERE](https://lolololol.rofl).
+More in-depth reasoning and background can be found [in this article](https://medium.com/schibsted-engineering/death-star-application-level-chaos-engineering-6f6862d77544).
 
 ### How does it work?
 
