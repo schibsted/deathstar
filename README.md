@@ -26,7 +26,7 @@ Deathstar comes in two parts,...
 
 The middleware act on signals from the Deathstar control plane. Signals that are broadcasted during an outage simulation.
 
-<a href="https://docs.google.com/drawings/d/1vuGsxQV6C2ggSQ-Fmfb195U48jDyO6awa9fXyeqOpAg/edit"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTJ9IzmknGF72W6tFJyG0Ef4PLeKruBMglTd2n486AQsfGyknZOtgFzHd9odVx_Cz-9h3nVz3IbZJJa/pub?w=1438&amp;h=848"></a>
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vTJ9IzmknGF72W6tFJyG0Ef4PLeKruBMglTd2n486AQsfGyknZOtgFzHd9odVx_Cz-9h3nVz3IbZJJa/pub?w=1438&amp;h=848">
 
 ### Mkay, what is it capable of?
 
@@ -41,10 +41,10 @@ It's also possible to define a list of endpoints and HTTP headers that should be
 
 ### Getting started
 
-* `git clone`, `npm install` and `npm run build`
-* Make necessary changes to `src/config`
-* `npm run start:web` to launch the control plane
-* `npm run start:trigger my-org/my-app` as a cronjob, to trigger a run of a partiular simulation suite at a given time
+1. `git clone`, `npm install` and `npm run build`
+1. Make necessary changes to `src/config`
+1. `npm run start:web` to launch the control plane
+1. `npm run start:trigger my-org/my-app` as a cronjob, to trigger a run of a partiular simulation suite at a given time
 
 ### Required environment variables
 
