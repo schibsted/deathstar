@@ -24,7 +24,7 @@ Deathstar comes in two parts,...
 - a Slack bot (this repo), which can be seen as the Deathstar control plane. It is responsible for coordinating and carrying out simulations and...
 - a middleware that need to be included in all services that are to be attacked by Deathstar
 
-The middleware act on signals from the Death Star control plane. Signals that are broadcasted during an outage simulation.
+The middleware act on signals from the Deathstar control plane. Signals that are broadcasted during an outage simulation.
 
 <a href="https://docs.google.com/drawings/d/1vuGsxQV6C2ggSQ-Fmfb195U48jDyO6awa9fXyeqOpAg/edit"><img src="https://docs.google.com/drawings/d/e/2PACX-1vTJ9IzmknGF72W6tFJyG0Ef4PLeKruBMglTd2n486AQsfGyknZOtgFzHd9odVx_Cz-9h3nVz3IbZJJa/pub?w=1438&amp;h=848"></a>
 
