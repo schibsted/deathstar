@@ -5,7 +5,7 @@ Clouds are **chaotic**.<br />
 **Unexpected events** happen all the time.<br />
 Deathstar is here to help us **being proactive** and ensuring we can **withstand disturbances in the cloud**.
 
-### Wait what, what's Death Star?
+### Wait what, what's Deathstar?
 
 It's application-level chaos engineering.<br />
 A way of creating controlled outage simulations and other types of simulated chaos, through the means of a Slack bot.
